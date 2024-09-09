@@ -17,13 +17,12 @@ public class player : MonoBehaviour {
         health -= someDamage;
         Debug.Log("Player took"+someDamage+"damage, health remaining: "+health);
         if (health<=0) Death();
-        //add 'someDamage' some damage from enemy when enemy touching player
     }
     void Death() {
         Debug.Log("Player has died!");
         Destroy(gameObject);
     }
-
+    // Collision logic
     void OnCollisionEnter2D(Collision2D other) {
         Debug.Log("collision");
         if (other.gameObject.CompareTag("enemy1")) {
