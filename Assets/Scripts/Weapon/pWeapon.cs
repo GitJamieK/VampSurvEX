@@ -12,7 +12,7 @@ public class pWeapon : MonoBehaviour {
         Vector2 swordDirection = mousePos - (Vector2)transform.position;
         swordTransform.up = swordDirection.normalized;
     }
-    //collision with enemy, -1 hp
+    //collision with enemy, apply 1 damage to somePDamage in enemy
     void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("enemy1")) {
             Debug.Log("collsion with enemy from weapon");

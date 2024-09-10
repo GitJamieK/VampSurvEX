@@ -22,12 +22,12 @@ public class enemyMovement : MonoBehaviour {
         zzTimer += Time.deltaTime * zzFrequency;
         //perpendicular direction to the player
         Vector3 perpendicular = new Vector3(-directionToPlayer.y, directionToPlayer.x, 0);
-        //apply zz effect
-        Vector3 zigzag = perpendicular * Mathf.Sin(zzTimer) * zzAmplitude;
-
-        Vector3 moveDirection = directionToPlayer + zigzag;
+        //apply zigzag effect
+        Vector3 zz = perpendicular * Mathf.Sin(zzTimer) * zzAmplitude;
+        //combine move to player and zigzag
+        Vector3 moveDirection = directionToPlayer + zz;
         moveDirection.Normalize();
-
+        //final zigzag+move to play movement
         transform.position += moveDirection * eMoveSpeed * Time.deltaTime;
     }
 }

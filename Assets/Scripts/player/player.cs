@@ -21,7 +21,7 @@ public class player : MonoBehaviour {
         Debug.Log("Player has died!");
         Destroy(gameObject);
     }
-    // Collision with enemy logic
+    //Collision with enemy logic
     void OnCollisionEnter2D(Collision2D other) {
         Debug.Log("collision with enemy from player");
         if (other.gameObject.CompareTag("enemy1")) {

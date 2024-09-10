@@ -16,7 +16,6 @@ public class enemy : MonoBehaviour {
     public void eTakeDamage(int somePDamage) {
         eHealth -= somePDamage;
         if (eHealth<=0) eDeath();
-        //add 'somePDamage' some player damage to enemy
     }
     void eDeath() {
         Debug.Log("Enemy has died!");
