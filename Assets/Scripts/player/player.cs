@@ -15,16 +15,15 @@ public class player : MonoBehaviour {
     }
     public void takeDamage(int someDamage) {
         health -= someDamage;
-        Debug.Log("Player took"+someDamage+"damage, health remaining: "+health);
         if (health<=0) Death();
     }
     void Death() {
         Debug.Log("Player has died!");
         Destroy(gameObject);
     }
-    // Collision logic
+    // Collision with enemy logic
     void OnCollisionEnter2D(Collision2D other) {
-        Debug.Log("collision");
+        Debug.Log("collision with enemy from player");
         if (other.gameObject.CompareTag("enemy1")) {
             Debug.Log("Player has taken damage, new health:"+health);
             takeDamage(2);

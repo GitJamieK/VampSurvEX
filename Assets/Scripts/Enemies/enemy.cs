@@ -13,12 +13,13 @@ public class enemy : MonoBehaviour {
     void Update() {
         
     }
-    void eTakeDamage(int somePDamage) {
+    public void eTakeDamage(int somePDamage) {
         eHealth -= somePDamage;
         if (eHealth<=0) eDeath();
         //add 'somePDamage' some player damage to enemy
     }
     void eDeath() {
         Debug.Log("Enemy has died!");
+        Destroy(gameObject);
     }
 }
