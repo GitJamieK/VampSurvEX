@@ -26,7 +26,8 @@ public class player : MonoBehaviour {
         Debug.Log("collision with enemy from player");
         if (other.gameObject.CompareTag("enemy1")) {
             Debug.Log("Player has taken damage, new health:"+health);
-            takeDamage(2);
+            enemy enemy = other.gameObject.GetComponent<enemy>();
+            takeDamage(enemy.eDamage);
         }
     }
 }

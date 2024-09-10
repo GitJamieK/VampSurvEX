@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemy : MonoBehaviour {
     public const int eMaxHealth = 5;
     public int eHealth = 5;
-    public int eDamage = 2; // needed?
+    public int eDamage = 2;
 
     void Start() {
         eHealth = eMaxHealth;
