@@ -10,7 +10,6 @@ public class spawnEnemy : MonoBehaviour {
     void Start() {
         InvokeRepeating("SpawnEnemy", spawnDelay, spawnDelay);
     }
-
     void SpawnEnemy() {
         float randomX = Random.Range(spawnRangeX.x, spawnRangeX.y);
         float randomY = Random.Range(spawnRangeY.x, spawnRangeY.y);

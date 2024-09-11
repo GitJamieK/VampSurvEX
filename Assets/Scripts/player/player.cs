@@ -10,9 +10,6 @@ public class player : MonoBehaviour {
     void Start() {
         health = maxHealth;
     }
-    void Update() {
-        
-    }
     public void takeDamage(int someDamage) {
         health -= someDamage;
         if (health<=0) Death();
