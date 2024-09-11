@@ -8,7 +8,7 @@ public class spawnEnemy : MonoBehaviour {
     public Vector2 spawnRangeX;
     public Vector2 spawnRangeY;
     void Start() {
-           InvokeRepeating("SpawnEnemy", spawnDelay, spawnDelay);
+        InvokeRepeating("SpawnEnemy", spawnDelay, spawnDelay);
     }
 
     void SpawnEnemy() {
