@@ -49,6 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eMoveSpeed: 5
+  zzFrequency: 5
+  zzAmplitude: 1
   moveToPlayer: {fileID: 0}
 --- !u!114 &5088515217502587485
 MonoBehaviour:
@@ -63,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eHealth: 5
-  eDamage: 2
+  eDamage: 5
 --- !u!61 &6943157470735825921
 BoxCollider2D:
   m_ObjectHideFlags: 0
