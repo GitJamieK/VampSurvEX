@@ -29,5 +29,11 @@ public class enemyMovement : MonoBehaviour {
         moveDirection.Normalize();
         //final zigzag+move to play movement
         transform.position += moveDirection * eMoveSpeed * Time.deltaTime;
+
+        facePlayer(directionToPlayer);
+    }
+    void facePlayer(Vector3 directionToPlayer) {
+        float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
     }
 }
