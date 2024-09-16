@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour {
     public const int maxHealth = 100;
@@ -16,7 +17,7 @@ public class player : MonoBehaviour {
     }
     void Death() {
         Debug.Log("Player has died!");
-        Destroy(gameObject);
+        SceneManager.LoadScene("StartScreen");
     }
     //Collision with enemy logic
     void OnCollisionEnter2D(Collision2D other) {
