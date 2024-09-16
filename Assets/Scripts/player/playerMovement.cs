@@ -15,7 +15,7 @@ public class playerMovement : MonoBehaviour {
     void Update() {
         movementx = Input.GetAxisRaw("Horizontal");
         movementy = Input.GetAxisRaw("Vertical");
-        movement = new Vector3(movementx, movementy, 0);
+        movement = new Vector3(movementx, movementy, 0).normalized;
         //anim
         if (movementx !< 0 || movementx !> 0) {
             animator.SetBool("isMoving", true);
