@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class player : MonoBehaviour {
+public class playerUpdate : MonoBehaviour {
     public const int maxHealth = 100;
     public int health = 100;
     

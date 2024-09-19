@@ -12,6 +12,9 @@ public class mainMenu : MonoBehaviour {
         PauseScreen = 3
     }
 
+    [SerializeField] enemyManager myenemyManager;
+    [SerializeField] playerUpdate myplayer;
+
     public mainMenuState state;
 
     public options optionsScript;
@@ -25,6 +28,7 @@ public class mainMenu : MonoBehaviour {
     void Update() {
         switch (state) {
             case mainMenuState.Playing:
+                myenemyManager.enemyUpdate();
                 if (Input.GetKeyDown(KeyCode.Escape)) {
                     state = mainMenuState.PauseScreen;
                 } 
@@ -37,7 +41,15 @@ public class mainMenu : MonoBehaviour {
             case mainMenuState.PauseScreen:
                 pauseState();
                 return;
+            default:
+                Debug.Log("[No Gamestate - " + state + "]");
+                break;
         }    
+    }
+
+    private void playerUpdate()
+    {
+        throw new NotImplementedException();
     }
 
     void optionsState() {

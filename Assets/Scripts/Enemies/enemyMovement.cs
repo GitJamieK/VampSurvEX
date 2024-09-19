@@ -7,12 +7,12 @@ public class enemyMovement : MonoBehaviour {
     [SerializeField] float zzFrequency = 5f; //oscillate faster
     [SerializeField] float zzAmplitude = 1f; //wider pattern + more noticeable
 
-    public player moveToPlayer;
+    public playerUpdate moveToPlayer;
     private float zzTimer = 0f;
 
     void Start() {
         if (moveToPlayer==null) {
-            moveToPlayer = FindObjectOfType<player>();
+            moveToPlayer = FindObjectOfType<playerUpdate>();
         }
     }
     //move to player logic + zigzag movement
