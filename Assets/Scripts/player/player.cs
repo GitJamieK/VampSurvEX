@@ -22,7 +22,7 @@ public class playerUpdate : MonoBehaviour {
     //Collision with enemy logic
     void OnCollisionEnter2D(Collision2D other) {
         Debug.Log("collision with enemy from player");
-        if (other.gameObject.CompareTag("enemy1")) {
+        if (other.gameObject.CompareTag("enemy1") || other.gameObject.CompareTag("enemy2")) {
             Debug.Log("Player has taken damage, new health:"+health);
             enemy enemy = other.gameObject.GetComponent<enemy>();
             takeDamage(enemy.eDamage);

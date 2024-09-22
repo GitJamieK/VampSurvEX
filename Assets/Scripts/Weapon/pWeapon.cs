@@ -11,7 +11,7 @@ public class pWeapon : MonoBehaviour {
     }
     //collision from child object with enemy, apply 1 damage to somePDamage in enemy
     public void OnWeaponTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("enemy1")) {
+        if(other.CompareTag("enemy1") || other.gameObject.CompareTag("enemy2")) {
             Debug.Log("collsion with enemy from weapon");
             other.GetComponent<enemy>()?.eTakeDamage(1);
         }

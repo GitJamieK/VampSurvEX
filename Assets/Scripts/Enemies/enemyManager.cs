@@ -7,7 +7,7 @@ public class enemyManager : MonoBehaviour {
     List<enemy> enemies = new List<enemy>();
     float nextEnemySpawn = 0;
 
-    [SerializeField] enemy enemyPrefab;
+    [SerializeField] List<enemy> enemyPrefabs;
     [SerializeField] float enemySpawnRate = 0;
     [SerializeField] float enemySpawnDistance = 0;
 
@@ -29,6 +29,7 @@ public class enemyManager : MonoBehaviour {
         spawnEnemy(playerPos.position + rndPos);
     }
     public void spawnEnemy(Vector3 aPos) {
+        enemy enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Count)];
         enemy e = Instantiate(enemyPrefab, transform);
         enemies.Add(e);
         e.transform.position = aPos;
