@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class enemy : MonoBehaviour {
-    public const int eMaxHealth = 5;
+    public int eMaxHealth = 5;
     public int eHealth = 5;
     public int eDamage = 5;
 
@@ -12,6 +12,7 @@ public class enemy : MonoBehaviour {
 
     void Start() {
         eHealth = eMaxHealth;
+        if (gameObject.CompareTag("enemy2")) {eHealth = eMaxHealth += 3;} //Debug.Log("hit enemy2 "+eHealth);}
     }
     public void updateEnemy() {
         
