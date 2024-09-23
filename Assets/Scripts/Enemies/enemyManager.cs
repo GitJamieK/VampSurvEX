@@ -39,6 +39,7 @@ public class enemyManager : MonoBehaviour {
     public void enemyKilled(enemy anEnemy) {
         anEnemy.onKilled.RemoveAllListeners();
         if (enemies.Contains(anEnemy)) enemies.Remove(anEnemy);
+        ExpManager.Instance.addExp(anEnemy.expAmount);
         Destroy(anEnemy.gameObject);
     }
 }

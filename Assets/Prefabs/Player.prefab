@@ -389,6 +389,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  curExp: 0
+  maxExp: 300
+  curLevel: 1
 --- !u!61 &6311077229531977670
 BoxCollider2D:
   m_ObjectHideFlags: 0
