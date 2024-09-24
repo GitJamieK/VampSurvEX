@@ -11,8 +11,10 @@ public class progBar : MonoBehaviour {
     public Image mask;
 
     void Start() { //subscribe event
-        ExpManager.Instance.onExpChange += handleExpChange;
-        UpdateBar();
+        if (ExpManager.Instance != null) {
+            ExpManager.Instance.onExpChange += handleExpChange;
+        }
+        if (mask != null) {UpdateBar();}
     }
     public void UpdateBar() {
         float curOffset = curr - min;
