@@ -118,7 +118,7 @@ RectTransform:
   m_GameObject: {fileID: 4315033714150620398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5115567597995299434}
@@ -183,7 +183,6 @@ MonoBehaviour:
   max: 300
   curr: 0
   mask: {fileID: 2158829959224456446}
-  smoothSpeed: 0.05
 --- !u!1 &5565134367870580197
 GameObject:
   m_ObjectHideFlags: 0
