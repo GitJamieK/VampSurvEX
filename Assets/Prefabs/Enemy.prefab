@@ -69,6 +69,7 @@ MonoBehaviour:
   eDamage: 5
   expAmount: 50
   Blood: {fileID: 7553438381060067439, guid: e30033c21a8b3bd4b8d58d09d07f029f, type: 3}
+  sprite: {fileID: 8489411591958477702}
   onKilled:
     m_PersistentCalls:
       m_Calls: []

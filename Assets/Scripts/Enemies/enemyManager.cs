@@ -20,7 +20,7 @@ public class enemyManager : MonoBehaviour {
         } else {
             nextEnemySpawn += Time.deltaTime * enemySpawnRate;
         } 
-        foreach (enemy e in enemies) e.updateEnemy();
+        foreach (enemy e in enemies);
     }
 
     public void spawnEnemyRnd() {

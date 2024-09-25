@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,6 +11,7 @@ public class enemy : MonoBehaviour {
     public int expAmount = 50;
 
     public GameObject Blood;
+    public SpriteRenderer sprite;
 
     public UnityEvent<enemy> onKilled;
 
@@ -17,8 +19,11 @@ public class enemy : MonoBehaviour {
         eHealth = eMaxHealth;
         if (gameObject.CompareTag("enemy2")) {eHealth = eMaxHealth += 3;} //Debug.Log("hit enemy2 "+eHealth);}
     }
-    public void updateEnemy() {
-        
+    public IEnumerator FlashRed() {
+        if (sprite != null) {
+            sprite.color = Color.red;
+            yield return new WaitForSeconds(0.1f);
+        } if (sprite != null) {sprite.color = Color.white;}
     }
     public void eTakeDamage(int somePDamage) {
         eHealth -= somePDamage;
