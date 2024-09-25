@@ -9,6 +9,8 @@ public class enemy : MonoBehaviour {
     public int eDamage = 5;
     public int expAmount = 50;
 
+    public GameObject Blood;
+
     public UnityEvent<enemy> onKilled;
 
     void Start() {
@@ -23,8 +25,7 @@ public class enemy : MonoBehaviour {
         if (eHealth<=0) eDeath();
     }
     public void eDeath() {
-        //Debug.Log("Enemy has died!");
         onKilled?.Invoke(this);
-        //Destroy(gameObject);
+        Instantiate(Blood, transform.position, Quaternion.identity);
     }
 }
