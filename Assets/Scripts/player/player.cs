@@ -17,11 +17,11 @@ public class playerUpdate : MonoBehaviour {
     }
     void Start() {
         health = maxHealth;
-        xpBar = FindObjectOfType<progBar>(); // Find the progress bar in the scene
-        xpBar.min = 0; // Set the min value to 0 for XP
-        xpBar.max = maxExp; // Set the max value for the progress bar
-        xpBar.curr = curExp; // Set the current XP
-        xpBar.UpdateBar(); // Initialize the progress bar display
+        xpBar = FindObjectOfType<progBar>();
+        xpBar.min = 0;
+        xpBar.max = maxExp;
+        xpBar.curr = curExp;
+        xpBar.UpdateBar();
     }
     public void handleExpChange(int newExp) {
         curExp += newExp;
@@ -36,9 +36,9 @@ public class playerUpdate : MonoBehaviour {
         curLevel++;
         curExp = 0; //reset xp on player
         maxExp += 100; //increase xp needed for next level.
-        xpBar.max = maxExp; // Update the progress bar's max value
-        xpBar.curr = curExp; // Reset progress bar's current XP
-        xpBar.UpdateBar(); // Update the progress bar
+        xpBar.max = maxExp; //update progress bar max value
+        xpBar.curr = curExp; //reset progress bar current XP
+        xpBar.UpdateBar();
     }
     public void takeDamage(int someDamage) {
         health -= someDamage;
