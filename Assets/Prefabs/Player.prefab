@@ -367,7 +367,7 @@ TrailRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -2
   m_Time: 0.5
-  m_PreviewTimeScale: 0.1
+  m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -507,6 +507,7 @@ MonoBehaviour:
   curExp: 0
   maxExp: 300
   curLevel: 1
+  mainMenu: {fileID: 0}
 --- !u!61 &6311077229531977670
 BoxCollider2D:
   m_ObjectHideFlags: 0

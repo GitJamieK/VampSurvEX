@@ -9,26 +9,31 @@ public class mainMenu : MonoBehaviour {
         Playing = 0,
         Options = 1,
         LevelUp = 2,
-        PauseScreen = 3
+        PauseScreen = 3,
+        DeathScreen = 4
     }
 
     [SerializeField] enemyManager myenemyManager;
     [SerializeField] playerUpdate myplayer;
+    [SerializeField] GameObject explosion;
 
     public mainMenuState state;
 
     public options optionsScript;
     public pause pauseScript;
+    public death deathScript;
 
     public GameObject Playing;
     public GameObject Options;
     public GameObject LevelUp;
     public GameObject PauseScreen;
+    public GameObject DeathScreen;
     
     void Update() {
         switch (state) {
             case mainMenuState.Playing:
                 myenemyManager.enemyUpdate();
+                if (Time.timeScale == 0) {Time.timeScale = 1;}
                 if (Input.GetKeyDown(KeyCode.Escape)) {
                     state = mainMenuState.PauseScreen;
                 } 
@@ -41,17 +46,18 @@ public class mainMenu : MonoBehaviour {
             case mainMenuState.PauseScreen:
                 pauseState();
                 return;
+            case mainMenuState.DeathScreen:
+                deathState();
+                return;
             default:
                 Debug.Log("[No Gamestate - " + state + "]");
                 break;
         }    
     }
-
-    private void playerUpdate()
-    {
-        throw new NotImplementedException();
-    }
-
+    //private void playerUpdate()
+    //{
+    //    throw new NotImplementedException();
+    //}
     void optionsState() {
               
     }
@@ -63,6 +69,11 @@ public class mainMenu : MonoBehaviour {
                 pauseScript.closePauseState();
                 state = mainMenuState.Playing;
             }
+        }
+    }
+    void deathState() {
+        if (deathScript != null) {
+            deathScript.deathState();
         }
     }
 }

@@ -11,6 +11,7 @@ public class playerUpdate : MonoBehaviour {
     [SerializeField] public int maxExp;
     [SerializeField] public int curLevel;
     progBar xpBar;
+    public mainMenu mainMenu;
     
     void OnEnable() { //subscribe event
         ExpManager.Instance.onExpChange += handleExpChange;
@@ -46,7 +47,7 @@ public class playerUpdate : MonoBehaviour {
     }
     void Death() {
         Debug.Log("Player has died!");
-        SceneManager.LoadScene("StartScreen"); //make death ui logic 
+        mainMenu.state = mainMenu.mainMenuState.DeathScreen;
     }
     //Collision with enemy logic
     void OnCollisionEnter2D(Collision2D other) {
