@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class playerUpdate : MonoBehaviour {
     public int maxHealth = 100;
     public int health = 100;
-    [SerializeField] public int curExp;
-    [SerializeField] public int maxExp;
-    [SerializeField] public int curLevel;
+    public int curExp;
+    public int maxExp;
+    public int curLevel;
     progBar xpBar;
     public mainMenu mainMenu;
     

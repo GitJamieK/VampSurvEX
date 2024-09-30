@@ -12,6 +12,7 @@ public class enemyManager : MonoBehaviour {
     [SerializeField] float enemySpawnDistance = 0;
 
     [SerializeField] Transform playerPos;
+    [SerializeField] playerUpdate playerUpdate;
 
     public void enemyUpdate() {
         if (nextEnemySpawn >= 1) {
@@ -20,7 +21,14 @@ public class enemyManager : MonoBehaviour {
         } else {
             nextEnemySpawn += Time.deltaTime * enemySpawnRate;
         } 
-        foreach (enemy e in enemies);
+        foreach (enemy e in enemies) {
+            if (playerUpdate.curLevel == 5 && !e.hasIncreasedStats) {
+                Debug.Log("eMaxHealth and eDamage updated");
+                e.eMaxHealth += 2;
+                e.eDamage += 2;
+                e.hasIncreasedStats = true;
+            }
+        }
     }
 
     public void spawnEnemyRnd() {

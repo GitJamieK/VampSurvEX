@@ -8,6 +8,7 @@ public class enemy : MonoBehaviour {
     public int eMaxHealth = 5;
     public int eHealth = 5;
     public int eDamage = 5;
+    public bool hasIncreasedStats = false;
     public int expAmount = 50;
 
     public GameObject Blood;

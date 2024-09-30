@@ -15,7 +15,6 @@ public class mainMenu : MonoBehaviour {
 
     [SerializeField] enemyManager myenemyManager;
     [SerializeField] playerUpdate myplayer;
-    [SerializeField] GameObject explosion;
 
     public mainMenuState state;
 
@@ -54,10 +53,10 @@ public class mainMenu : MonoBehaviour {
                 break;
         }    
     }
-    //private void playerUpdate()
-    //{
-    //    throw new NotImplementedException();
-    //}
+    private void playerUpdate()
+    {
+        throw new NotImplementedException();
+    }
     void optionsState() {
               
     }
