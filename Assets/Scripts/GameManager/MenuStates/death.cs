@@ -14,9 +14,9 @@ public class death : MonoBehaviour {
         DeathState.SetActive(false);
         SceneManager.LoadScene("MainGame");
     }
-    public void mainMenu() {
-        SceneManager.LoadScene("StartScreen");
-    }
+    //public void mainMenu() {
+    //    SceneManager.LoadScene("StartScreen");
+    //}
     public void exitGame() {
         Application.Quit();
         #if UNITY_EDITOR

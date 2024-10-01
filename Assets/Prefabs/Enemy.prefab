@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5088515217502587485}
   - component: {fileID: 5812795236364034450}
   - component: {fileID: 6943157470735825921}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: enemy1
   m_Icon: {fileID: 0}
@@ -67,6 +67,7 @@ MonoBehaviour:
   eMaxHealth: 5
   eHealth: 5
   eDamage: 5
+  hasIncreasedStats: 0
   expAmount: 50
   Blood: {fileID: 7553438381060067439, guid: e30033c21a8b3bd4b8d58d09d07f029f, type: 3}
   sprite: {fileID: 8489411591958477702}
@@ -155,7 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8036087191966078442}
   - component: {fileID: 8489411591958477702}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: enemyBody
   m_TagString: enemy1
   m_Icon: {fileID: 0}

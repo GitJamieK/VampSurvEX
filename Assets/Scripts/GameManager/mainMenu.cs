@@ -19,6 +19,7 @@ public class mainMenu : MonoBehaviour {
     public mainMenuState state;
 
     public options optionsScript;
+    public levelUp levelUpScript;
     public pause pauseScript;
     public death deathScript;
 
@@ -41,6 +42,7 @@ public class mainMenu : MonoBehaviour {
                 optionsState();
                 return;
             case mainMenuState.LevelUp:
+                levelUpState();
                 return;
             case mainMenuState.PauseScreen:
                 pauseState();
@@ -59,6 +61,9 @@ public class mainMenu : MonoBehaviour {
     }
     void optionsState() {
               
+    }
+    void levelUpState() {
+        levelUpScript.levelUpState();
     }
     void pauseState() {
         if (pauseScript != null) {

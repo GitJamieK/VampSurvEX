@@ -31,7 +31,7 @@ public class playerUpdate : MonoBehaviour {
         xpBar.curr = curExp;
         xpBar.UpdateBar();
     }
-    void levelUp() {
+    public void levelUp() {
         /* temp?? -> */ maxHealth += 10;
         /* temp?? -> */ health = maxHealth;
         curLevel++;
@@ -40,6 +40,7 @@ public class playerUpdate : MonoBehaviour {
         xpBar.max = maxExp; //update progress bar max value
         xpBar.curr = curExp; //reset progress bar current XP
         xpBar.UpdateBar();
+        mainMenu.state = mainMenu.mainMenuState.LevelUp;
     }
     public void takeDamage(int someDamage) {
         health -= someDamage;

@@ -11,7 +11,6 @@ public class pause : MonoBehaviour {
     }
     public void closePauseState() {
         PauseState.SetActive(false);
-        Time.timeScale = 1;
     }
     public void ExitGame() {
         Application.Quit();

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class enemyMovement : MonoBehaviour {
-    [SerializeField] float eMoveSpeed = 5f;
+    [SerializeField] public float eMoveSpeed = 5f;
     [SerializeField] float zzFrequency = 5f; //oscillate faster
     [SerializeField] float zzAmplitude = 1f; //wider pattern + more noticeable
 
