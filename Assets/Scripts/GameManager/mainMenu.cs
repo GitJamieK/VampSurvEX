@@ -63,6 +63,7 @@ public class mainMenu : MonoBehaviour {
               
     }
     void levelUpState() {
+        Time.timeScale = 0f;
         levelUpScript.levelUpState();
     }
     void pauseState() {

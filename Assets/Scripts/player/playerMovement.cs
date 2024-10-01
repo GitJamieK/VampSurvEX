@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour {
-    [SerializeField] float moveSpeed = 10f;
+    [SerializeField] public float moveSpeed = 10f;
     [SerializeField] Animator animator;
 
     public Transform spriteTransform;
