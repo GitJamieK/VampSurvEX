@@ -11,6 +11,7 @@ public class playerUpdate : MonoBehaviour {
     public int maxExp;
     public int curLevel;
     progBar xpBar;
+    public healthManager healthManager;
     public mainMenu mainMenu;
     
     void OnEnable() { //subscribe event
@@ -40,11 +41,13 @@ public class playerUpdate : MonoBehaviour {
         xpBar.max = maxExp; //update progress bar max value
         xpBar.curr = curExp; //reset progress bar current XP
         xpBar.UpdateBar();
+        healthManager.updateHealthBar();
         mainMenu.state = mainMenu.mainMenuState.LevelUp;
     }
     public void takeDamage(int someDamage) {
         health -= someDamage;
         if (health<=0) Death();
+        healthManager.updateHealthBar();
     }
     void Death() {
         Debug.Log("Player has died!");
