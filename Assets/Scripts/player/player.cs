@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class playerUpdate : MonoBehaviour {
     public int maxHealth = 100;
     public int health = 100;
+    public int pDmg = 1;
     public int curExp;
     public int maxExp;
     public int curLevel;

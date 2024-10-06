@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class pWeapon : MonoBehaviour {
     public Transform swordTransform;
+    public playerUpdate player;
     void Update() {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 swordDirection = mousePos - (Vector2)transform.position;
@@ -15,7 +16,7 @@ public class pWeapon : MonoBehaviour {
             enemy e = other.GetComponent<enemy>();
             Debug.Log("collsion with enemy from weapon");
             StartCoroutine(e.FlashRed());
-            other.GetComponent<enemy>()?.eTakeDamage(1);
+            other.GetComponent<enemy>()?.eTakeDamage(player.pDmg);
         }
     }
 }
