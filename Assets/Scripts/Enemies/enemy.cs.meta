@@ -3,7 +3,9 @@ guid: d3a9e4048117d01428b57c7a4f707647
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Blood: {fileID: 7553438381060067439, guid: e30033c21a8b3bd4b8d58d09d07f029f, type: 3}
+  - sprite: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
