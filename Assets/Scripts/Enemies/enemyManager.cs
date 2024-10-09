@@ -24,14 +24,14 @@ public class enemyManager : MonoBehaviour {
         foreach (enemy e in enemies) {
             if (playerUpdate.curLevel == 5 && !e.hasIncreasedStats) {
                 Debug.Log("eMaxHealth and eDamage updated");
-                e.eMaxHealth += 2;
-                e.eDamage += 2;
+                e.eMaxHealth += 10;
+                e.eDamage += 3;
                 e.hasIncreasedStats = true;
             }
             if (playerUpdate.curLevel == 10 && !e.hasIncreasedStats) {
                 Debug.Log("eMaxHealth and eDamage updated");
-                e.eMaxHealth += 3;
-                e.eDamage += 3;
+                e.eMaxHealth += 20;
+                e.eDamage += 6;
                 e.hasIncreasedStats = true;
             }
         }

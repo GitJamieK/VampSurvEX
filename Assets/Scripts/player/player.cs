@@ -16,6 +16,7 @@ public class playerUpdate : MonoBehaviour {
     public healthManager healthManager;
     public mainMenu mainMenu;
     public enemyManager enemyManager;
+    public enemy enemy;
     //public upgradeManager upgradeManager;
     
     void OnEnable() { //subscribe event
@@ -46,8 +47,13 @@ public class playerUpdate : MonoBehaviour {
         xpBar.curr = curExp; //reset progress bar current XP
         xpBar.UpdateBar();
         healthManager.updateHealthBar();
+        if (enemy == null) {
+            enemy = FindObjectOfType<enemy>();
+        }
+        enemyManager.enemySpawnRate += 1;
+        enemy.eDamage += 3;
+        enemy.eHealth += 5;
         mainMenu.state = mainMenu.mainMenuState.LevelUp;
-        enemyManager.enemySpawnRate += 2;
     }
     public void takeDamage(int someDamage) {
         health -= someDamage;
