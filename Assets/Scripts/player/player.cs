@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class playerUpdate : MonoBehaviour {
     public int maxHealth = 100;
@@ -59,7 +60,8 @@ public class playerUpdate : MonoBehaviour {
     //Collision with enemy logic
     void OnCollisionEnter2D(Collision2D other) {
         Debug.Log("collision with enemy from player");
-        if (other.gameObject.CompareTag("enemy1") || other.gameObject.CompareTag("enemy2")) {
+        string[] tagsToCheck = { "enemy1", "enemy2", "enemy3" };
+        if (tagsToCheck.Any(tag => other.gameObject.CompareTag(tag))) {
             Debug.Log("Player has taken damage, new health:"+health);
             enemy enemy = other.gameObject.GetComponent<enemy>();
             takeDamage(enemy.eDamage);

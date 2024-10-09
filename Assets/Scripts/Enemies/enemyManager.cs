@@ -28,6 +28,12 @@ public class enemyManager : MonoBehaviour {
                 e.eDamage += 2;
                 e.hasIncreasedStats = true;
             }
+            if (playerUpdate.curLevel == 10 && !e.hasIncreasedStats) {
+                Debug.Log("eMaxHealth and eDamage updated");
+                e.eMaxHealth += 3;
+                e.eDamage += 3;
+                e.hasIncreasedStats = true;
+            }
         }
     }
 

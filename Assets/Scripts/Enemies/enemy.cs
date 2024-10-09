@@ -18,7 +18,8 @@ public class enemy : MonoBehaviour {
 
     void Start() {
         eHealth = eMaxHealth;
-        if (gameObject.CompareTag("enemy2")) {eHealth = eMaxHealth += 3;} //Debug.Log("hit enemy2 "+eHealth);}
+        if (gameObject.CompareTag("enemy2")) {eHealth = eMaxHealth += 3;}
+        if (gameObject.CompareTag("enemy3")) {eDamage += 2;}
     }
     public IEnumerator FlashRed() {
         if (sprite != null) {
