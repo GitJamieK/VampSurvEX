@@ -15,6 +15,7 @@ public class playerUpdate : MonoBehaviour {
     progBar xpBar;
     public healthManager healthManager;
     public mainMenu mainMenu;
+    public enemyManager enemyManager;
     //public upgradeManager upgradeManager;
     
     void OnEnable() { //subscribe event
@@ -45,8 +46,8 @@ public class playerUpdate : MonoBehaviour {
         xpBar.curr = curExp; //reset progress bar current XP
         xpBar.UpdateBar();
         healthManager.updateHealthBar();
-        //upgradeManager.showUpgrades();
         mainMenu.state = mainMenu.mainMenuState.LevelUp;
+        enemyManager.enemySpawnRate += 2;
     }
     public void takeDamage(int someDamage) {
         health -= someDamage;

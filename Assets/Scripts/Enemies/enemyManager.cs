@@ -8,7 +8,7 @@ public class enemyManager : MonoBehaviour {
     float nextEnemySpawn = 0;
 
     [SerializeField] List<enemy> enemyPrefabs;
-    [SerializeField] float enemySpawnRate = 0;
+    [SerializeField] public float enemySpawnRate = 0;
     [SerializeField] float enemySpawnDistance = 0;
 
     [SerializeField] Transform playerPos;
