@@ -767,7 +767,9 @@ MonoBehaviour:
   curLevel: 1
   healthManager: {fileID: 8521926849811911215}
   mainMenu: {fileID: 0}
-  upgradeManager: {fileID: 0}
+  enemyManager: {fileID: 0}
+  enemy: {fileID: 0}
+  pWeapon: {fileID: 0}
 --- !u!114 &8521926849811911215
 MonoBehaviour:
   m_ObjectHideFlags: 0

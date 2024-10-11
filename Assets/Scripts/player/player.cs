@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using Unity.Mathematics;
 
 public class playerUpdate : MonoBehaviour {
     public int maxHealth = 100;
@@ -17,7 +18,7 @@ public class playerUpdate : MonoBehaviour {
     public mainMenu mainMenu;
     public enemyManager enemyManager;
     public enemy enemy;
-    //public upgradeManager upgradeManager;
+    public pWeapon pWeapon;
     
     void OnEnable() { //subscribe event
         ExpManager.Instance.onExpChange += handleExpChange;
